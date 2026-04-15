@@ -1,0 +1,113 @@
+/* Configuración General */
+body {
+    background: radial-gradient(circle, #252a30 0%, #0d0e12 100%);
+    color: #e1e1e1;
+    font-family: 'Cinzel', serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.main-container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.game-title {
+    font-size: 3rem;
+    letter-spacing: 8px;
+    color: #ffffff;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    margin-bottom: 40px;
+}
+
+/* Contenedor de botones */
+.button-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Botón Estilo Dota 2 */
+.btn-dota {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 60px;
+    border: 2px solid #3c3c3c;
+    position: relative;
+    transition: all 0.2s ease;
+    clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%); /* Forma trapezoidal */
+    /* ... (mantén lo anterior) ... */
+    overflow: hidden; /* Esto es clave para el brillo */
+
+/* El destello de luz */
+.btn-dota::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transform: skewX(-25deg);
+    transition: 0s;
+}
+
+/* Animación al pasar el mouse */
+.btn-dota:hover::before {
+    left: 150%;
+    transition: 0.7s;
+}
+
+}
+
+/* Botón de Jugar (Verde Dota) */
+.play-btn {
+    background: linear-gradient(to bottom, #4d6d31, #2c3e1c);
+    border-color: #6a923d;
+}
+
+.play-btn:hover {
+    background: linear-gradient(to bottom, #608a3d, #3a5225);
+    box-shadow: 0 0 20px rgba(96, 138, 61, 0.6);
+    transform: scale(1.05);
+}
+
+/* Botón Secundario (Gris/Azul oscuro) */
+.secondary-btn {
+    background: linear-gradient(to bottom, #394149, #1b1e22);
+    border-color: #555c64;
+}
+
+.secondary-btn:hover {
+    background: linear-gradient(to bottom, #4a545e, #262a30);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
+}
+
+/* Textos dentro del botón */
+.btn-text {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
+
+.btn-subtext {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.6);
+    letter-spacing: 2px;
+}
